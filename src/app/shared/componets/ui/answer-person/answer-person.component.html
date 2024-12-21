@@ -1,0 +1,36 @@
+<p-virtualScroller [value]="wornganswer" scrollHeight="500px" [itemSize]="300">
+  <ng-template pTemplate="item" let-item>
+    <div class="item-container p-4">
+      <!-- Wrap each item in a div -->
+      <h2 class="text-lg">{{ item.question }}</h2>
+      @for (anser of item.answers; track $index) {
+      <div>
+        <label
+          [ngClass]="{
+            'bg-green': anser.key === item.correct,
+            'bg-red': anser.key === item.Personsanswer,
+            'bg-black-alpha-10':
+              anser.key !== item.correct && anser.key !== item.Personsanswer
+          }"
+          class="flex my-3 p-2 border-round"
+        >
+          <input
+            [checked]="anser.key === item.Personsanswer"
+            [disabled]="item.Personsanswer !== undefined"
+            type="radio"
+            name="options"
+          />
+          <span
+            class="custom-radio mx-2"
+            [ngClass]="{ 'bg-red': anser.key === item.Personsanswer }"
+          ></span>
+          {{ anser.answer }}
+        </label>
+      </div>
+      }
+    </div>
+  </ng-template>
+</p-virtualScroller>
+
+
+<button class="p-2 w-full mt-3 border-round main-bg text-white border-none cursor-pointer" (click)="backtohome()">back</button>

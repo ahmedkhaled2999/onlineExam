@@ -1,0 +1,15 @@
+.borer-color {
+  border-color: transparent;
+}
+
+
+.colorChange{
+    background-color: white;
+    border-color: rgba(0, 0, 0, 0.205);
+}
+
+.colorChange:hover {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  color: white;
+}

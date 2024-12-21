@@ -1,0 +1,15 @@
+.text-font {
+  font-size: 50px;
+}
+
+.border {
+  border: 7px rgba(255, 255, 255, 0.466) solid;
+}
+.border-w {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

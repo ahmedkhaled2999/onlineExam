@@ -1,0 +1,32 @@
+@if(showmadal()){
+<div
+  class="w-screen flex justify-content-center align-items-center bg-black-alpha-20 h-screen fixed top-0 right-0 z-5"
+>
+  <div
+    class="bg-white w-8 h-10rem flex justify-content-center align-items-center border-round-2xl"
+  >
+    <div>
+      <h2 class="text-sm md:text-2xl font-normal mb-2 ">
+        Are you shure you need to log out ?
+      </h2>
+      <div
+        class="flex justify-content-around align-content-center border-black-alpha-90"
+      >
+        <app-button
+          [text]="'No'"
+          [style]="''"
+          [style_button]="false"
+          (click)="no()"
+        ></app-button>
+        <app-button
+          [text]="'Yes'"
+          [style]="''"
+          [style_button]="true"
+          (click)="yes()"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>
+
+}

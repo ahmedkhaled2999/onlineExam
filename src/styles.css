@@ -1,1 +1,267 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+.bg-auth {
+  background: rgb(241, 245, 252);
+  background: linear-gradient(
+    90deg,
+    rgba(241, 245, 252, 1) 52%,
+    rgba(240, 244, 252, 1) 52%,
+    rgba(240, 244, 252, 0.9640231092436975) 87%
+  );
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-color {
+  color: var(--main-color);
+}
+.main-bg {
+  background-color: var(--main-color);
+}
+
+:root {
+  --main-color: #4461f2;
+}
+a {
+  text-decoration: none;
+}
+
+.style_button {
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 15px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.style_button:hover {
+  background-color: #3366fd8f;
+}
+.style_button-white {
+  color: var(--main-color);
+  padding: 12px 28px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid var(--main-color);
+  transition: 0.5s;
+}
+.style_button-white:hover {
+  background-color: #8f2626;
+  color: white;
+  border-color: #8f2626;
+}
+
+input {
+  border: none;
+  background-color: #e0e0e980;
+  border-radius: 8px;
+}
+
+input:focus {
+  outline-color: #3364fd;
+}
+.bordeRed {
+  border: 2px solid red;
+}
+
+.home-bg {
+  background-color: #fbf9f9;
+}
+.container {
+  max-width: 1328px; /* Maximum width */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Default padding */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .container {
+    padding: 15px; /* Reduce padding for larger screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 10px; /* Further reduce padding for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 5px; /* Minimal padding for small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0; /* No padding for extra small screens */
+  }
+}
+.active {
+  color: white;
+  background-color: var(--main-color);
+  transition: 0.5s;
+
+  border-radius: 10px;
+}
+
+.fit-content {
+  width: fit-content;
+}
+.icon {
+  color: var(--main-color);
+}
+
+.width-maodal {
+  width: 648px;
+}
+
+.width-back {
+  width: 200px;
+  height: 40px;
+  border-radius: 100px;
+}
+
+.resulat-Spherical {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-container {
+  position: relative;
+  width: 132px;
+  height: 132px;
+}
+
+svg {
+  transform: rotate(-90deg); /* Start the circle from top */
+}
+
+/* Blue Circle (80% Progress) */
+.progress-bar {
+  stroke: #003b96; /* Blue color */
+  stroke-width: 8;
+  stroke-linecap: round;
+  fill: none;
+
+  transition: stroke-dashoffset 1s ease;
+}
+
+/* Red Circle (Small additional stroke) */
+.progress-extra {
+  stroke: #c90000; /* Red color */
+  stroke-width: 8;
+  stroke-linecap: round;
+  fill: none;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 0; /* Small progress at the top */
+}
+
+/* Center Text */
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.Oval {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  display: inline-block; /* Ensures they are inline */
+  margin-right: 5px; /* Space between bullets */
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* Custom radio button */
+.custom-radio {
+  width: 20px; /* Set width */
+  height: 20px; /* Set height */
+  border: 2px solid var(--main-color); /* Border color */
+  border-radius: 50%; /* Make it circular */
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + .custom-radio {
+  background-color: white;
+}
+
+/* Inner circle */
+.custom-radio:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+input[type="radio"]:checked + .custom-radio:after {
+  display: block;
+}
+
+.bg-input {
+  background-color: rgba(149, 179, 235, 0.336);
+}
+
+.bg-green {
+  background-color: rgba(0, 128, 0, 0.301);
+}
+
+.bg-red {
+  background-color: rgba(255, 0, 0, 0.315);
+}
+
+.bg-white {
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
+}

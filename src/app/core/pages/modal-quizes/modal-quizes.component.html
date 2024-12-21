@@ -1,0 +1,29 @@
+@if (!show) {
+<app-layer [style]="'white'">
+  <div>
+    <h2>Instructions</h2>
+    <ul>
+      <li class="m-2">Lorem ipsum dolor sit amet consectetur.</li>
+      <li class="m-2">Lorem ipsum dolor sit amet consectetur.</li>
+      <li class="m-2">Lorem ipsum dolor sit amet consectetur.</li>
+      <li class="m-2 mb-3">Lorem ipsum dolor sit amet consectetur.</li>
+    </ul>
+
+    <app-button
+      (click)="changeshow()"
+      [text]="'start'"
+      [style_button]="true"
+    ></app-button>
+  </div>
+</app-layer>
+
+}@else { @if (showqustion) {
+
+<app-layer [style]="'white'">
+  <app-exams-question [Question]="Question"></app-exams-question>
+</app-layer>
+
+}@else {
+<app-animation (newItemEvent)="openQuestion($event)"></app-animation>
+
+} }

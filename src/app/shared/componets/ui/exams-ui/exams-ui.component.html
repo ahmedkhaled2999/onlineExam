@@ -1,0 +1,25 @@
+<div class="h-screen">
+  @for (item of EXAMS; track $index) {
+  <div class="flex justify-content-between p-2">
+    <div class="flex align-items-center">
+      <div class="image-placeholder">
+        <span>Image Placeholder</span>
+      </div>
+      <div class="mx-3">
+        <h4 class="uppercase font-semibold mb-1">{{ item.title }}</h4>
+        <span class="text-gray-600">{{ item.numberOfQuestions }}</span>
+      </div>
+    </div>
+    <div class="text-center">
+      <span class="text-sm">{{ item.duration }} Minutes</span>
+      <app-button
+        [text]="'Start'"
+        [style_button]="true"
+        (click)="changeshow(item._id)"
+      ></app-button>
+    </div>
+  </div>
+  } @if(showExams){
+  <app-modal-quizes [idqustion]="idEqustion"></app-modal-quizes>
+  }
+</div>

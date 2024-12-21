@@ -1,1 +1,0 @@
-import{$a as o,ab as a,ba as n,pb as s,wb as r}from"./chunk-CDVPIOLB.js";var c=(()=>{class e{static{this.\u0275fac=function(t){return new(t||e)}}static{this.\u0275cmp=n({type:e,selectors:[["app-change-password"]],standalone:!0,features:[r],decls:2,vars:0,template:function(t,p){t&1&&(o(0,"p"),s(1,"change-password works!"),a())}})}}return e})();export{c as ChangePasswordComponent};

@@ -1,0 +1,61 @@
+.Oval {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+ 
+  display: inline-block; /* Ensures they are inline */
+  margin-right: 5px; /* Space between bullets */
+}
+
+.Oval {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+ 
+  display: inline-block; /* Ensures they are inline */
+  margin-right: 5px; /* Space between bullets */
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* Custom radio button */
+.custom-radio {
+  width: 20px; /* Set width */
+  height: 20px; /* Set height */
+  border: 2px solid  var(--main-color); /* Border color */
+  border-radius: 50%; /* Make it circular */
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + .custom-radio {
+  background-color: white;
+}
+
+/* Inner circle */
+.custom-radio:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+input[type="radio"]:checked + .custom-radio:after {
+  display: block;
+}
+
+
+
+.bg-input{
+    background-color: rgba(149, 179, 235, 0.336);
+}
+

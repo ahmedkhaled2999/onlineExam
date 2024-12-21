@@ -1,0 +1,66 @@
+.text-place {
+  top: 199.78px;
+  left: 27.01px;
+}
+.width {
+  width: 330.17px;
+  height: 292.65px;
+}
+.width-text {
+  width: 276.14px;
+  height: 66.03px;
+  border-radius: 8.44px;
+  background-color: rgba(25, 53, 202, 0.4);
+  padding: 6px;
+  color: white;
+}
+.fs {
+  font-size: 13.51px;
+  font-weight: 700;
+  line-height:20.26px ;
+}
+.row{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.example-item {
+  height: 50px; /* Set the height of each item */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 0 0 calc(33.33% - 10px); /* Adjust the width to 33.33% for 3 items */
+  margin: 5px; /* Add some margin between items */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.bg-black-alpha-60 {
+  background-color: rgba(0, 0, 0, 0.6); /* Example background color */
+}
+
+.width {
+  position: relative;
+}
+
+.width-text {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  color: white; /* Example text color */
+}
+

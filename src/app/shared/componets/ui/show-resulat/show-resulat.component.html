@@ -1,0 +1,62 @@
+@if (reusult) {
+<div>
+  <h3>your score</h3>
+
+  <div class="flex justify-content-around align-items-center">
+    <div class="progress-container">
+      <svg width="132" height="132" viewBox="0 0 132 132">
+        <circle class="progress-extra" cx="66" cy="66" r="50" />
+        =
+        <circle
+          class="progress-bar"
+          cx="66"
+          cy="66"
+          r="50"
+          [attr.stroke-dasharray]="314"
+          [attr.stroke-dashoffset]="correctOffset"
+        />
+      </svg>
+
+      <div class="progress-text">{{ correctPercentage }}%</div>
+    </div>
+
+    <div>
+      <ul>
+        <li class="main-color mb-4 font-semibold row">
+          Correct
+          <span class="mx-2 row resulat-Spherical">{{
+            correctAnswers.length
+          }}</span>
+        </li>
+        <li class="text-red-600 mb-4 font-semibold row">
+          incorrect
+          <span class="mx-2 row resulat-Spherical">{{
+            wrongAnswers.length
+          }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="flex justify-content-center">
+    <app-button
+      (click)="backtohome()"
+      [text]="'back'"
+      [style]="'width-back m-2'"
+      [style_button]="false"
+    ></app-button>
+    <app-button
+      (click)="changeshow()"
+      [text]="'show results'"
+      [style]="'width-back m-2'"
+      [style_button]="true"
+
+    ></app-button>
+  </div>
+</div>
+
+}@else {
+
+<app-answer-person [wornganswer]="wrongAnswers"></app-answer-person>
+
+}

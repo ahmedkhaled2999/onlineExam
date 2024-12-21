@@ -1,0 +1,33 @@
+<div class="relative z-3">
+  <div
+    class="sm:hidden flex justify-content-between main-bg align-items-center text-white p-2"
+  >
+    <div class="icon-hove">
+      <i class="fa-solid fa-bars mr-2" (click)="toggleMenu()"></i>
+    </div>
+    <img src="assets/images/Rectangle 289.png" alt="" />
+  </div>
+
+  <div
+    class="p-2 menu absolute bg-white w-full"
+    [ngClass]="{ 'menu-open': isMenuOpen }"
+  >
+    <img src="assets/images/Final Logo 1.png" alt="elevate" />
+    <ul class="w-full">
+      @for (item of menuItems; track $index) {
+      <li>
+        <div
+          [ngClass]="{ active: activeIndex === $index }"
+          class="p-2 flex justify-content-between align-items-center w-9rem my-3"
+          (click)="setActive($index)"
+          (click)="item.label === 'Logout' ? logout() : ''"
+        >
+          <i [ngClass]="item.icon"></i>
+          <h4 class="text-lg font-normal">{{ item.label }}</h4>
+        </div>
+      </li>
+      }
+    </ul>
+  </div>
+</div>
+<app-modal></app-modal>

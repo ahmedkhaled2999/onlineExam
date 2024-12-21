@@ -1,0 +1,10 @@
+.menu {
+    bottom: -230px; /* Start hidden */
+    transition:  0.3s ease; /* Smooth transition */
+    display: hidden;
+  }
+  
+  .menu-open {
+    bottom: 230px;
+    display: block; /* Move to visible position */
+  }

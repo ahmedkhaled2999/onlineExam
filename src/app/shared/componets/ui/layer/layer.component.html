@@ -1,0 +1,10 @@
+<div
+  class="w-screen h-screen z-5 bg-black-alpha-30 absolute top-0 right-0 flex justify-content-center align-items-center"
+>
+  <div
+    [ngClass]="style == 'white' ? ' bg-white ' : 'flex justify-content-center align-items-center'"
+    class=" width-maodal p-4 border-round"
+  >
+    <ng-content></ng-content>
+  </div>
+</div>

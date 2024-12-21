@@ -1,0 +1,117 @@
+
+@if (inputname == 'username') { @if(formGroup.get('username')?.errors &&
+formGroup.get('username')?.touched) { @if
+(formGroup.get('username')?.errors?.['required']) {
+<div class="p-2 text-sm text-red-800 border-round bg-red-50" role="alert">
+  <span class="font-bold">Reqired</span>
+</div>
+}@else if (formGroup.get('username')?.errors?.['minlength']) {
+<div
+  class="p-2 text-sm text-red-800 border-roundbg-red-50 dark:bg-gray-800 dark:text-red-400"
+  role="alert"
+>
+  <span class="font-bold">minlength!</span> PLEASE ENTER AT LEST 3 CHRATRAR AND
+  MAX IS 10
+</div>
+} @else if (formGroup.get('username')?.errors?.['maxlength']) {
+<div
+  class="p-2 text-sm text-red-800 border-round bg-red-50 dark:bg-gray-800 dark:text-red-400"
+  role="alert"
+>
+  <span class="font-medium">maxlength!</span> please enter 10 chracter
+</div>
+} } }
+
+<!--  -->
+
+@if (inputname == 'firstName') { @if(formGroup.get('firstName')?.errors &&
+formGroup.get('firstName')?.touched) { @if
+(formGroup.get('firstName')?.errors?.['required']) {
+<div class="p-2 text-sm text-red-800 border-round" role="alert">
+  <span class="font-medium">Reqired</span>
+</div>
+}@else if (formGroup.get('firstName')?.errors?.['minlength']) {
+<div class="p-2 text-sm text-red-800 border-round" role="alert">
+  <span class="font-medium">minlength!</span> PLEASE ENTER AT LEST 3 CHRATRAR
+  AND MAX IS 10
+</div>
+} @else if (formGroup.get('firstName')?.errors?.['maxlength']) {
+<div class="p-2 text-sm text-red-800 border-round" role="alert">
+  <span class="font-medium">maxlength!</span> please enter 10 chracter
+</div>
+} } }
+<!--  -->
+
+@if (inputname == 'lastName') { @if(formGroup.get('lastName')?.errors &&
+formGroup.get('lastName')?.touched) { @if
+(formGroup.get('lastName')?.errors?.['required']) {
+<div
+  class="p-2 text-sm text-red-800 border-round bg-red-50 dark:bg-gray-800 dark:text-red-400"
+  role="alert"
+>
+  <span class="font-medium">Reqired</span>
+</div>
+}@else if (formGroup.get('lastName')?.errors?.['minlength']) {
+<div
+  class="p-2 text-sm text-red-800 border-round bg-red-50 dark:bg-gray-800 dark:text-red-400"
+  role="alert"
+>
+  <span class="font-medium">minlength!</span> PLEASE ENTER AT LEST 3 CHRATRAR
+  AND MAX IS 10
+</div>
+} @else if (formGroup.get('lastName')?.errors?.['maxlength']) {
+<div
+  class="p-2 text-sm text-red-800 border-round bg-red-50 dark:bg-gray-800 dark:text-red-400"
+  role="alert"
+>
+  <span class="font-medium">maxlength!</span> please enter 10 chracter
+</div>
+} } }
+
+<!--  -->
+@if (inputname == 'email') { @if (formGroup.get('email')?.errors &&
+formGroup.get('email')?.touched) { @if
+(formGroup.get('email')?.errors?.['required']) {
+<div
+  class="p-2 text-sm text-red-800 border-round bg-red-50 dark:bg-gray-800 dark:text-red-400"
+  role="alert"
+>
+  <span class="font-medium"> email is Reqired </span>
+</div>
+}@else if (formGroup.get('email')?.errors?.['email']) {
+<div
+  class="p-2 text-sm text-red-800 border-round bg-red-50 dark:bg-gray-800 dark:text-red-400"
+  role="alert"
+>
+  <span class="font-medium">please enter valid email</span>
+</div>
+} } }
+<!--  -->
+@if (inputname == 'password') { @if (formGroup.get('password')?.errors &&
+formGroup.get('password')?.touched) { @if
+(formGroup.get('password')?.errors?.['required']) {
+<div class="p-2 text-sm text-red-800 border-round" role="alert">
+  <span class="font-medium"> password is Reqired </span>
+</div>
+}@else if (formGroup.get('password')?.errors?.['pattern']) {
+<div class="p-2 text-sm text-red-800 border-round bg-red-50" role="alert">
+  <span class="font-medium">must be at least 6 chars</span>
+</div>
+} } }
+<!--  -->
+@if (inputname == 'rePassword') { @if (formGroup.errors?.['mismatch']) {
+<div class="p-2 bg-red-50 text-red-800 border-round ">plese enter the same password</div>
+} }
+<!--  -->
+
+@if (inputname == 'phone') { @if (formGroup.get('phone')?.errors &&
+formGroup.get('phone')?.touched) { @if
+(formGroup.get('phone')?.errors?.['required']) {
+<div class="p-2 text-sm text-red-800 border-round bg-red-50" role="alert">
+  <span class="font-medium"> phone is Reqired </span>
+</div>
+}@else if (formGroup.get('phone')?.errors?.['pattern']) {
+<div class="p-2 text-sm text-red-800 border-round bg-red-50" role="alert">
+  <span class="font-medium">please enter valid phone</span>
+</div>
+} } }

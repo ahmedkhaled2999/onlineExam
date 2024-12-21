@@ -1,0 +1,48 @@
+<form action="" [formGroup]="form" (ngSubmit)="outputinput()">
+  <!-- page name -->
+  <app-headname [text]="headbages"></app-headname>
+  <!-- error come from api -->
+  <app-errapi></app-errapi>
+  @for (item of Input; track $index) {
+  <!-- inputs  -->
+  @if (item.type == 'password' ) {
+  <div class="relative">
+    <input
+      class="p-3 w-27rem my-3"
+      [formControlName]="item.formcontrol"
+      [type]="passwordVisible[item.formcontrol] ? 'text' : item.type"
+      [placeholder]="item.placeholder"
+      [ngClass]="{ 'border-red': isInvalidAndTouched(item.formcontrol) }"
+    />
+    <i
+      class="fa-regular fa-eye absolute right-0 top"
+      (click)="togglePasswordVisibility(item.formcontrol)"
+      [ngClass]="{
+        'fa-eye-slash': passwordVisible[item.formcontrol],
+        'fa-eye': !passwordVisible[item.formcontrol]
+      }"
+    ></i>
+  </div>
+
+  }@else {
+  <input
+    class="p-3 w-27rem my-3"
+    [formControlName]="item.formcontrol"
+    [type]="item.type"
+    [placeholder]="item.placeholder"
+    [ngClass]="{ 'border-red': isInvalidAndTouched(item.formcontrol) }"
+  />
+
+  }
+  <!-- error come from FromGroup -->
+  <app-errocomponets
+    [formGroup]="form"
+    [inputname]="item.formcontrol"
+  ></app-errocomponets>
+  }
+  <!-- this text bottom inputs -->
+  <app-textauth [page]="headbages"></app-textauth>
+  <!-- button send data -->
+  <app-button [text]="'sing in'" [style]="'p-2 w-full text-white'"></app-button>
+</form>
+-
